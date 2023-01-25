@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Jokes = require("../models/jokesmessage");
 
-router.post("/jokes", async (req, res)=>{
+router.post("/", async (req, res)=>{
     try{
         const jokesData = new Jokes(req.body);
         await jokesData.save();
